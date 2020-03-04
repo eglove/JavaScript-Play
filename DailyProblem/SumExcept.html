@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    // Given an array of integers, return a new array such that each element at index i of the new array
+    // is the product of all the numbers in the original array except the one at i.
+
+    // const array = [1, 2, 3, 4, 5];
+    const array = [3, 2, 1];
+    let newArray = [];
+    let sum = 1;
+
+    for(let i = 0; i < array.length; i++) {
+      for(let j = 0; j < array.length; j++) {
+        if(j !== i) {
+          sum *= array[j];
+        }
+      }
+      newArray.push(sum);
+      sum = 1;
+    }
+
+    console.log(array);
+    console.log(newArray);
+</script>
